@@ -17,3 +17,8 @@ Di dalam konteks kode, AMQP berfungsi sebagai penghubung antar aplikasi dengan s
 ## Simulation slow subscriber
 ![Simulation slow subscriber](assets/images/Simulation%20slow%20subscriber.jpg)
 Gambar tersebut menunjukkan bahwa Subscriber mengalami keterlambatan dalam menerima data dari message broker, dengan setiap proses mengalami delay selama satu detik. Pesan-pesan yang di-queue pada message broker akan terus bertambah seiring dengan peningkatan delay, karena Publisher akan lebih cepat daripada Subscriber dalam menerima data. Jumlah total pesan yang di-queue pada komputer saya adalah 16 setelah menjalankan 5 kali perintah cargo run di Publisher
+
+## Reflection and Running at least three subscriber
+![Reflection and Running at least three subscribers](assets/images/Reflection%20and%20Running%20at%20least%20three_1.jpg)
+![Reflection and Running at least three subscribers](assets/images/Reflection%20and%20Running%20at%20least%20three_2.jpg)
+Menurut pemahaman saya, ketika banyak subscriber terhubung ke satu publisher, pengiriman data ke message broker bisa menjadi lebih cepat dan terdistribusi. Hal ini juga dapat mengakibatkan tidak ada pesan yang masuk ke dalam antrian pesan pada message broker untuk subscriber yang terhubung. Meskipun jumlah subscriber yang terhubung mempengaruhi kinerja, kecepatan pengiriman ke message broker juga dipengaruhi oleh faktor lain seperti latensi jaringan dan beban kerja message broker.
